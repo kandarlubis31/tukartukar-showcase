@@ -13,6 +13,18 @@
 
 ---
 
+## 📸 Tampilan
+
+### Desktop
+
+![TukarTukar — tampilan desktop](screenshots/desktop.png)
+
+### Mobile
+
+![TukarTukar — tampilan mobile](screenshots/mobile.png)
+
+---
+
 ## ❌ Masalahnya
 
 - Barang bekas yang masih layak pakai sering berakhir di **tumpukan sampah** — menjual di marketplace itu ribet (foto, harga, negosiasi, ongkir)
