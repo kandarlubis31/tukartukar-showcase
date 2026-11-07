@@ -50,24 +50,24 @@ Platform barter barang bekas untuk gaya hidup berkelanjutan: **unggah barang →
 
 ```mermaid
 flowchart LR
- subgraph FE[" React SPA"]
- P["Pages: Beranda · Detail Barang · Chat · Profil"]
- S["Services: API client + JWT header"]
- end
- subgraph BE[" Django REST Framework"]
- A["Auth (JWT issue/refresh)"]
- I["Items API (CRUD + upload foto)"]
- C["Chat API (polling 3s)"]
- R["Reports API"]
- ADM["Admin Panel Django"]
- end
- DB[(" Database<br/>items · users · messages · reports")]
- MED[(" Media<br/>foto barang")]
- S -->|"REST + Bearer token"| A
- S --> I & C & R
- A & I & C & R --> DB
- I --> MED
- ADM --> DB
+    subgraph FE[" React SPA"]
+        P["Pages: Beranda · Detail Barang · Chat · Profil"]
+        S["Services: API client + JWT header"]
+    end
+    subgraph BE[" Django REST Framework"]
+        A["Auth (JWT issue/refresh)"]
+        I["Items API (CRUD + upload foto)"]
+        C["Chat API (polling 3s)"]
+        R["Reports API"]
+        ADM["Admin Panel Django"]
+    end
+    DB[(" Database<br/>items · users · messages · reports")]
+    MED[(" Media<br/>foto barang")]
+    S -->|"REST + Bearer token"| A
+    S --> I & C & R
+    A & I & C & R --> DB
+    I --> MED
+    ADM --> DB
 ```
 
 - **Backend:** Django REST Framework + JWT auth, validasi input dua lapis, pagination, database indexing
